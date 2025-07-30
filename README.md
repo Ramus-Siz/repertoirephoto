@@ -34,3 +34,22 @@ You can check out [the Next.js GitHub repository](https://github.com/vercel/next
 The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
 
 Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+
+-------------------
+.env.local
+AUTH_SECRET="QTgs1j9dgHyMy/C5UH0dmI9Mb0zpTL2ODk9Dy6IoCzs="
+ADMIN_EMAIL=admin@advanscongo.com
+ADMIN_PASSWORD=secret123
+NEXTAUTH_URL=http://localhost:3000
+JWT_SECRET=a3Plhgp2eg8rmBWKMWTeCFbWmTd1GWc3c+Pgl+AKSuU
+
+------------------
+.env 
+
+DATABASE_URL=postgresql://postgres:postgres@db:5455/mydb
+AUTH_SECRET="QTgs1j9dgHyMy/C5UH0dmI9Mb0zpTL2ODk9Dy6IoCzs="
+ADMIN_EMAIL=admin@advanscongo.com
+ADMIN_PASSWORD=secret123
+NEXTAUTH_URL=http://localhost:3000
+JWT_SECRET=a3Plhgp2eg8rmBWKMWTeCFbWmTd1GWc3c+Pgl+AKSuU
+
