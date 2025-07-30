@@ -1,35 +1,35 @@
 # Étape 1 : Build
-FROM node:18-slim AS build
+# FROM node:18-slim AS build
 
-RUN apt-get update && \
-    apt-get install -y openssl ca-certificates curl && \
-    rm -rf /var/lib/apt/lists/*
+# RUN apt-get update && \
+#     apt-get install -y openssl ca-certificates curl && \
+#     rm -rf /var/lib/apt/lists/*
 
-ENV LIGHTNINGCSS_FORCE_WASM=true
+# ENV LIGHTNINGCSS_FORCE_WASM=true
 
-WORKDIR /app
+# WORKDIR /app
 
-COPY package*.json ./
-RUN npm ci
+# COPY package*.json ./
+# RUN npm ci
 
-COPY . .
+# COPY . .
 
-# Générer Prisma Client
-RUN npx prisma generate
+# # Générer Prisma Client
+# RUN npx prisma generate
 
-# Build Next.js
-RUN npm run build
+# # Build Next.js
+# RUN npm run build
 
-# Étape 2 : Runtime
+# # Étape 2 : Runtime
 
-FROM node:18-slim AS runtime
+# FROM node:18-slim AS runtime
 
-WORKDIR /app
+# WORKDIR /app
 
-COPY --from=build /app/package*.json ./
-COPY --from=build /app/node_modules ./node_modules
-COPY --from=build /app/.next ./.next
-COPY --from=build /app/public ./public
-COPY --from=build /app/prisma ./prisma
+# COPY --from=build /app/package*.json ./
+# COPY --from=build /app/node_modules ./node_modules
+# COPY --from=build /app/.next ./.next
+# COPY --from=build /app/public ./public
+# COPY --from=build /app/prisma ./prisma
 
-EXPOSE 3005
+# EXPOSE 3005
