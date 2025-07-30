@@ -1,0 +1,64 @@
+generator client {
+  provider = "prisma-client-js"
+  output= "../src/generated/prisma"
+}
+
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+model Province {
+  id      Int      @id @default(autoincrement())
+  name    String
+  createdAt      DateTime   @default(now())
+  agences Agence[]
+  agents  Agent[]
+}
+
+model Agence {
+  id         Int      @id @default(autoincrement())
+  name       String
+  codeAgence String   @unique
+  createdAt      DateTime   @default(now())
+  provinceId Int
+  province   Province @relation(fields: [provinceId], references: [id])
+  agents     Agent[]
+}
+
+
+model Departement {
+  id      Int      @id @default(autoincrement())
+  name    String
+  agents  Agent[]
+  createdAt      DateTime   @default(now())
+}
+
+model Function {
+  id      Int      @id @default(autoincrement())
+  name    String
+  createdAt      DateTime   @default(now())
+  agents  Agent[]
+}
+
+model Agent {
+  id             Int        @id @default(autoincrement())
+  firstName      String
+  lastName       String
+  phoneNumbers   String[]
+  photoUrl       String?
+  engagementDate String?
+  status         Boolean    @default(true)
+  createdAt      DateTime   @default(now())
+
+  departementId  Int
+  functionId     Int
+  provinceId     Int
+  agenceId       Int
+
+  departement    Departement @relation(fields: [departementId], references: [id])
+  function       Function    @relation(fields: [functionId], references: [id])
+  province       Province    @relation(fields: [provinceId], references: [id])
+  agence         Agence      @relation(fields: [agenceId], references: [id])
+}

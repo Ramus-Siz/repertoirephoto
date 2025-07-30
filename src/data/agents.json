@@ -1,0 +1,170 @@
+[
+  {
+    "id": 1,
+    "firstName": "Richard",
+    "lastName": "Rafiki",
+    "photoUrl": "/images/1752362148222-user.png",
+    "phoneNumbers": [
+      "+243812345678",
+      "+243997654321"
+    ],
+    "status": true,
+    "departementId": 1,
+    "functionId": 1,
+    "engagementDate": "2022-03-15"
+  },
+  {
+    "id": 2,
+    "firstName": "Linda",
+    "lastName": "Mukeba",
+    "photoUrl": "/profilImage.png",
+    "phoneNumbers": [
+      "+243810000007"
+    ],
+    "status": false,
+    "departementId": "1",
+    "functionId": 2,
+    "engagementDate": "2021-07-10"
+  },
+  {
+    "id": 3,
+    "firstName": "Jean",
+    "lastName": "Kabanga",
+    "photoUrl": "/images/1752361830716-Rafiki Richard .png",
+    "phoneNumbers": [
+      "+243899999999"
+    ],
+    "status": true,
+    "departementId": 3,
+    "functionId": 3,
+    "engagementDate": "2020-01-20"
+  },
+  {
+    "id": 3,
+    "firstName": "Joshua",
+    "lastName": "Manga",
+    "photoUrl": "/profilImage.png",
+    "phoneNumbers": [
+      "+243899919999"
+    ],
+    "status": false,
+    "departementId": 3,
+    "functionId": 3,
+    "engagementDate": "2023-06-01"
+  },
+  {
+    "firstName": "King",
+    "lastName": "kaz",
+    "phoneNumbers": [
+      "22222222222"
+    ],
+    "photoUrl": "/profilImage.png",
+    "departementId": 1,
+    "functionId": 1,
+    "status": true,
+    "id": 4,
+    "engagementDate": "2022-11-12"
+  },
+  {
+    "firstName": "Keran",
+    "lastName": "Mukendi",
+    "phoneNumbers": "8963693369",
+    "photoUrl": "/profilImage.png",
+    "functionId": 2,
+    "status": false,
+    "departementId": "3",
+    "id": 5,
+    "engagementDate": "2021-04-09"
+  },
+  {
+    "firstName": "Lori",
+    "lastName": "Lori",
+    "phoneNumbers": [
+      "878769584"
+    ],
+    "photoUrl": "/profilImage.png",
+    "functionId": 2,
+    "status": true,
+    "departementId": "2",
+    "id": 6,
+    "engagementDate": "2022-02-25"
+  },
+  {
+    "firstName": "Van",
+    "lastName": "Van",
+    "phoneNumbers": [
+      "878769580"
+    ],
+    "photoUrl": "/profilImage.png",
+    "departementId": 2,
+    "functionId": 3,
+    "status": true,
+    "id": 7,
+    "engagementDate": "2023-01-30"
+  },
+  {
+    "firstName": "Ramus",
+    "lastName": "Ramus",
+    "phoneNumbers": [
+      "878762580"
+    ],
+    "photoUrl": "/images/1752362380226-rafiki-richard Mushagalusa (1).png",
+    "departementId": 2,
+    "functionId": 1,
+    "status": true,
+    "id": 8,
+    "engagementDate": "2020-08-05"
+  },
+  {
+    "firstName": "Brad",
+    "lastName": "Brad",
+    "phoneNumbers": [
+      "+243970351896"
+    ],
+    "photoUrl": "/images/1752235201980-profilImage.png",
+    "departementId": 2,
+    "functionId": 2,
+    "engagementDate": "2023-06",
+    "status": true,
+    "id": 9
+  },
+  {
+    "firstName": "Malick",
+    "lastName": "Malick",
+    "phoneNumbers": [
+      "+243970301896"
+    ],
+    "photoUrl": "/images/1752235368319-profilImage.png",
+    "departementId": 3,
+    "functionId": 3,
+    "engagementDate": "2023-06",
+    "status": true,
+    "id": 10
+  },
+  {
+    "firstName": "Jordan",
+    "lastName": "Kilabi",
+    "phoneNumbers": [
+      "+243970361987"
+    ],
+    "photoUrl": "",
+    "departementId": "2",
+    "functionId": 3,
+    "engagementDate": "2022-03",
+    "status": true,
+    "id": 11
+  },
+  {
+    "firstName": "Joe",
+    "lastName": "D",
+    "phoneNumbers": [
+      "+243587865856"
+    ],
+    "photoUrl": "/images/1752366644214-logo lacoste.png",
+    "departementId": 4,
+    "functionId": 3,
+    "engagementDate": "2025-06",
+    "status": true,
+    "id": 12
+  }
+]

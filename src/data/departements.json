@@ -1,0 +1,18 @@
+[
+  {
+    "id": 1,
+    "name": "Crédits"
+  },
+  {
+    "id": 2,
+    "name": "Opérations"
+  },
+  {
+    "id": 3,
+    "name": "IT"
+  },
+  {
+    "name": "Finances",
+    "id": 4
+  }
+]

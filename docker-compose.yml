@@ -1,0 +1,44 @@
+services:
+  db:
+    image: postgres:15
+    restart: always
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: postgres
+      POSTGRES_DB: mydb
+    ports:
+      - '5455:5432'
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U postgres"]
+      interval: 5s
+      timeout: 5s
+      retries: 5
+
+  web:
+    container_name: advans-agents
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - '3005:3000'
+    environment:
+      NODE_ENV: production
+      DATABASE_URL: postgres://postgres:postgres@db:5432/mydb
+    depends_on:
+      db:
+        condition: service_healthy
+    command: >
+      sh -c "
+        mkdir -p src/generated/prisma/runtime &&
+        npx prisma migrate deploy &&
+        npm run build &&
+        npm start
+      "
+    volumes:
+      - .:/app
+    working_dir: /app
+
+volumes:
+  postgres_data:
