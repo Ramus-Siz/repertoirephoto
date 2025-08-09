@@ -22,8 +22,10 @@ services:
       - "3005:3000"
     volumes:
       - ./:/app
+      - uploads_data:/app/uploads
     depends_on:
       - db
 
 volumes:
   db_data:
+  uploads_data:

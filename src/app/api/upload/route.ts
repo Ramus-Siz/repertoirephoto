@@ -13,7 +13,8 @@ export async function POST(req: Request) {
 
   const bytes = await file.arrayBuffer();
   const buffer = Buffer.from(bytes);
-  const uploadDir = path.join(process.cwd(), 'public/images');
+  // Utiliser un dossier uploads séparé du dossier public
+  const uploadDir = path.join(process.cwd(), 'uploads');
 
   await mkdir(uploadDir, { recursive: true });
 
@@ -22,5 +23,6 @@ export async function POST(req: Request) {
 
   await writeFile(filePath, buffer);
 
-  return NextResponse.json({ url: `/images/${fileName}` });
+  // Retourner l'URL vers notre API de service d'images
+  return NextResponse.json({ url: `/api/images/${fileName}` });
 }
